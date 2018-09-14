@@ -7,16 +7,19 @@ This is an evolving draft of the "open namespace process".  It is phrased for us
 There will be a master "database" maintained as one or more files the w3c/activitystreams repo.  This database will enumerate all the terms in the namespace, and for each term it will state:
 
  - a stability level, one of "unstable", "testing", "stable", or "archaic", defined below
- - zero of more people who serve as editor (including relevant contact info, including github username)
+ - various RDF schema information about the term (domain, range, etc)
+ - zero of more people who serve as editor (including relevant contact info, especially github username)
  - a specification fragment (in HTML) which describes and defines the term,
    possibly including examples and references
- - pointers to systems which use or intend to use this term (possible
-   with pointers to evidence, and more details.)
- - various RDF schema information about the term (domain, range, etc)
  - pointers to a test suite and/or validator for this term
+ - pointers to systems which use or intend to use this term (possible
+   with pointers to evidence, and more details like test results.)
+
 
 The HTML and JSON-LD documents available at the vocabulary namespace
-URL will be generated from this database.
+URL will be generated from this database.  Since size is important for
+a JSON-LD context document, it may link to the full information rather
+than including it.
 
 ## Pull requests
 
