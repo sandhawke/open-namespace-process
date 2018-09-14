@@ -73,8 +73,8 @@ Maybe markdown would be easiest to maintain.  Each term would be a level-1 headi
 >
 > Property| Value 
 > --------|:----- 
-> domain  | Object
-> range   | Collection
+> domain  | [Object]()
+> range   | [Collection]()
 > func    | True
 > status  | "stable"
 > editor  |
