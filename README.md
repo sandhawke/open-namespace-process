@@ -71,17 +71,19 @@ Maybe markdown would be easiest to maintain.  Each term would be a level-1 headi
 
 > # replies
 >
+> [replies]: #replies
+>
 > Property| Value 
 > --------|:----- 
-> domain  | [Object]()
-> range   | [Collection]()
+> domain  | [Object]
+> range   | [Collection]
 > func    | True
 > status  | "stable"
 > editor  |
 > impls   | <https://www.w3.org/2017/02/social/implementations/as2/>
 > tests   | <https://github.com/w3c/activitystreams/tree/master/test>
 >
-> Identifies a [Collection](#Collection) containing objects considered to be responses to this object.
+> Identifies a [Collection] containing objects considered to be responses to this object.
 > 
 > Example:
 >
@@ -107,4 +109,17 @@ Maybe markdown would be easiest to maintain.  Each term would be a level-1 headi
 >   }
 > }
 > ```
-> 
+
+To make the links work trivially using square brackets, terms should
+also define themselves as references, which I've done above (but it
+doesn't render), like:
+
+> ```markdown
+> [replies]: #replies
+> [Object]: #Object
+> [Collection]: #Collection
+> ```
+
+[replies]: #replies
+[Object]: #Object
+[Collection]: #Collection
