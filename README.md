@@ -1,5 +1,7 @@
 This is an evolving draft of the "open namespace process".  It is phrased for use with activitystreams, but the changes to generalize it would be trivial.
 
+See [format](./format.md) for some thoughts on a possible database format.
+
 ----
 
 ## The "namespace database"
@@ -60,66 +62,3 @@ Any edits in "stable" require approval of the group, and are unlikely to be appr
 ## Advancement from "stable" to "archaic"
 
 If the community decides people should be generally steered away from a term, but it's already "stable" so it can't just be removed, its status may be advanced to "archaic".
-
-----
-
-## Related ideas
-
-### Database format
-
-Maybe markdown would be easiest to maintain.  Each term would be a level-1 heading (a line matching /^# /, and the text until the next heading (or end of file) would be the data for that item.  Headings in alphabetic order.  Maybe it starts with a markdown table which is the structured data, and then the rest in the spec.  For example:
-
-> # replies
->
-> [replies]: #replies
->
-> Property| Value 
-> --------|:----- 
-> domain  | [Object]
-> range   | [Collection]
-> func    | True
-> status  | "stable"
-> editor  |
-> impls   | <https://www.w3.org/2017/02/social/implementations/as2/>
-> tests   | <https://github.com/w3c/activitystreams/tree/master/test>
->
-> Identifies a [Collection] containing objects considered to be responses to this object.
-> 
-> Example:
->
-> 
-> ```json
-> {
->   "@context": "https://www.w3.org/ns/activitystreams",
->   "summary": "A simple note",
->   "type": "Note",
->   "id": "http://www.test.example/notes/1",
->   "content": "I am fine.",
->   "replies": {
->     "type": "Collection",
->     "totalItems": 1,
->     "items": [
->       {
->         "summary": "A response to the note",
->         "type": "Note",
->         "content": "I am glad to hear it.",
->         "inReplyTo": "http://www.test.example/notes/1"
->       }
->     ]
->   }
-> }
-> ```
-
-To make the links work trivially using square brackets, terms should
-also define themselves as references, which I've done above (but it
-doesn't render), like:
-
-> ```markdown
-> [replies]: #replies
-> [Object]: #Object
-> [Collection]: #Collection
-> ```
-
-[replies]: #replies
-[Object]: #Object
-[Collection]: #Collection
