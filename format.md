@@ -65,8 +65,8 @@ Property| Value
 --------|:----- 
 domain  | [Object]
 range   | [Collection]
-func    | True
-status  | "stable"
+func    | true
+status  | stable
 editor  | evanp, jasnell
 impls   | <https://www.w3.org/2017/02/social/implementations/as2/>
 tests   | <https://github.com/w3c/activitystreams/tree/master/test>
