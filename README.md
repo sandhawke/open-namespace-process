@@ -4,12 +4,12 @@ This is an evolving draft of the "open namespace process".  It is phrased for us
 
 ## The "namespace database"
 
-There will be a master "database" maintained as one or more files the w3c/activitystreams repo.  This database will enumerate all the terms in the namespace, and for each term it will state:
+There will be a master "database" maintained as one or more files in the w3c/activitystreams repo.  This database will enumerate all the terms in the namespace, and for each term it will state:
 
  - a stability level, one of "unstable", "testing", "stable", or "archaic", defined below
  - various RDF schema information about the term (domain, range, etc)
  - zero of more people who serve as editor (including relevant contact info, especially github username)
- - a specification fragment (in HTML) which describes and defines the term,
+ - a specification fragment (in safe HTML or markdown) which describes and defines the term,
    possibly including examples and references
  - pointers to a test suite and/or validator for this term
  - pointers to systems which use or intend to use this term (possible
@@ -60,3 +60,51 @@ Any edits in "stable" require approval of the group, and are unlikely to be appr
 ## Advancement from "stable" to "archaic"
 
 If the community decides people should be generally steered away from a term, but it's already "stable" so it can't just be removed, its status may be advanced to "archaic".
+
+----
+
+## Related ideas
+
+### Database format
+
+Maybe markdown would be easiest to maintain.  Each term would be a level-1 heading (a line matching /^# /, and the text until the next heading (or end of file) would be the data for that item.  Headings in alphabetic order.  Maybe it starts with a markdown table which is the structured data, and then the rest in the spec.  For example:
+
+> # replies
+>
+> Property| Value 
+> --------|:----- 
+> domain  | Object
+> range   | Collection
+> func    | True
+> status  | "stable"
+> editor  |
+> impls   | <https://www.w3.org/2017/02/social/implementations/as2/>
+> tests   | <https://github.com/w3c/activitystreams/tree/master/test>
+>
+> Identifies a [Collection](#Collection) containing objects considered to be responses to this object.
+> 
+> Example:
+>
+> 
+> ```json
+> {
+>   "@context": "https://www.w3.org/ns/activitystreams",
+>   "summary": "A simple note",
+>   "type": "Note",
+>   "id": "http://www.test.example/notes/1",
+>   "content": "I am fine.",
+>   "replies": {
+>     "type": "Collection",
+>     "totalItems": 1,
+>     "items": [
+>       {
+>         "summary": "A response to the note",
+>         "type": "Note",
+>         "content": "I am glad to hear it.",
+>         "inReplyTo": "http://www.test.example/notes/1"
+>       }
+>     ]
+>   }
+> }
+> ```
+> 
