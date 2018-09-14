@@ -22,7 +22,7 @@ The HTML and JSON-LD documents available at the vocabulary namespace URL will be
 
 Pull requests to the database are evaluated by one or more "namespace maintainers" at their earliest convenience.  They are evaluated for process and safety, not for other issues like ontology design, uniqueness, relevance, adoption, utility, or editorial quality. If the PR is not an obvious accept or reject on process and safety grounds, it should be prompty escalated to the full group of namespace maintainers and potentially the CG for investigation, discussion, and a decision.  Safety issues may need to be escalated to the W3C or GitHub safety teams. Process issues are defined in this document; safety issues are defined in the CG code-of-conduct, the [W3C CEPC](https://www.w3.org/Consortium/cepc/), and other relevant documents.
 
-Maintainers may make "friendly" suggestions for improvement to the PR, as long as it is clear the PR will be approved promptly even if the suggestions are not accepted.
+Maintainers may make suggestions for improvement to the PR, as long as it is clear the PR will be approved promptly even if the suggestions are not accepted.
 
 ## New terms
 
