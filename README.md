@@ -1,7 +1,5 @@
 This is an evolving draft of the "open namespace process".  It is phrased for use with activitystreams, but the changes to generalize it would be trivial.
 
-See [format](./format.md) for some thoughts on a possible database format.
-
 ----
 
 ## The "namespace database"
@@ -19,6 +17,8 @@ There will be a master "database" maintained as one or more files in the w3c/act
 
 
 The HTML and JSON-LD documents available at the vocabulary namespace URL will be generated from this database.  Since size is important for a JSON-LD context document, it may link to the full information rather than including it.
+
+Not exactly sure the right way to maintain this database for easy hand editing with PRs.  See one suggestion for [syntax of namespace database files](./format.md).
 
 ## Pull requests
 
