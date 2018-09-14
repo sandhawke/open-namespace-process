@@ -16,18 +16,17 @@ There will be a master "database" maintained as one or more files the w3c/activi
    with pointers to evidence, and more details like test results.)
 
 
-The HTML and JSON-LD documents available at the vocabulary namespace
-URL will be generated from this database.  Since size is important for
-a JSON-LD context document, it may link to the full information rather
-than including it.
+The HTML and JSON-LD documents available at the vocabulary namespace URL will be generated from this database.  Since size is important for a JSON-LD context document, it may link to the full information rather than including it.
 
 ## Pull requests
 
-Pull requests to the database are evaluated by one or more "namespace maintainers" at their earliest convenience.  In this stage they are evaluated for process and safety, not for other issues like ontology design, uniqueness, relevance, adoption, utility, or editorial quality. If the PR is not an obvious accept or reject on process and safety grounds, it should be prompty escalated to the full group of namespace maintainers and potentially the CG.  Safety issue might need to be escalated to the W3C or GitHub safety teams. Process issues are defined in this document; safety issues in the CG code-of-conduct, the W3C CEPC, and other relevant documents.
+Pull requests to the database are evaluated by one or more "namespace maintainers" at their earliest convenience.  They are evaluated for process and safety, not for other issues like ontology design, uniqueness, relevance, adoption, utility, or editorial quality. If the PR is not an obvious accept or reject on process and safety grounds, it should be prompty escalated to the full group of namespace maintainers and potentially the CG for investigation, discussion, and a decision.  Safety issues may need to be escalated to the W3C or GitHub safety teams. Process issues are defined in this document; safety issues are defined in the CG code-of-conduct, the [W3C CEPC](https://www.w3.org/Consortium/cepc/), and other relevant documents.
+
+Maintainers may make "friendly" suggestions for improvement to the PR, as long as it is clear the PR will be approved promptly even if the suggestions are not accepted.
 
 ## New terms
 
-Process allows anyone to add terms not currently in the database, with the following constraints:
+This process allows anyone to add terms not currently in the database, with the following constraints:
  - the term is classified as "unstable"
  - the person making the pull request must be named as editor
  - one or more implementations must be listed (they may be "pending", that is, planning to implement support for the term) 
@@ -36,7 +35,7 @@ Process allows anyone to add terms not currently in the database, with the follo
 
 ## Updating terms
 
-Process allows any editor of an "unstable" term to edit its documentation at will via PR. They may also add co-editors, subject to assent of the new editors, and change the implementation list.  They may also resign, by removing themselves from the editors list.
+This process allows any editor of an "unstable" term to edit its documentation at will via PR. They may also add co-editors, subject to assent of the new editors, and change the implementation list.  They may also resign, by removing themselves from the editors list.
 
 ## Orphaned terms
 
@@ -54,16 +53,9 @@ Any edits in testing require approval of the group.
 
 ## Advancement from "testing" to "stable"
 
-Once a term has been in testing for at least 8 weeks, an editor may
-ask the CG to advance it to "stable".  This is comparable to W3C
-Recommendation, in that it signals the term is ready for wide use and
-that no more "substantive" changes (ones which might require changes
-to a conforming implementation) will be made to the terms
-documentation.  This advancement also requires approval of the CG.
+Once a term has been in testing for at least 8 weeks, an editor may ask the CG to advance it to "stable".  This is comparable to W3C Recommendation, in that it signals the term is ready for wide use and that no more "substantive" changes (ones which might require changes to a conforming implementation) will be made to the terms documentation.  This advancement also requires approval of the CG.
 
-Any edits in "stable" require approval of the group, and are unlikely
-to be approved unless they are fixing clear errors and supported by
-all implementors.
+Any edits in "stable" require approval of the group, and are unlikely to be approved unless they are fixing clear errors and supported by all implementors.
 
 ## Advancement from "stable" to "archaic"
 
