@@ -6,7 +6,7 @@ This is an evolving draft of the "open namespace process".  It is phrased for us
 
 There will be a master "database" maintained as one or more files the w3c/activitystreams repo.  This database will enumerate all the terms in the namespace, and for each term it will state:
 
- - a stability level (see below)
+ - a stability level, one of "unstable", "testing", "stable", or "archaic", defined below
  - zero of more people who serve as editor (including relevant contact info, including github username)
  - a specification fragment (in HTML) which describes and defines the term,
    possibly including examples and references
@@ -61,3 +61,7 @@ documentation.  This advancement also requires approval of the CG.
 Any edits in "stable" require approval of the group, and are unlikely
 to be approved unless they are fixing clear errors and supported by
 all implementors.
+
+## Advancement from "stable" to "archaic"
+
+If the community decides people should be generally steered away from a term, but it's already "stable" so it can't just be removed, its status may be advanced to "archaic".
